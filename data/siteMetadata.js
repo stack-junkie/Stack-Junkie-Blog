@@ -3,7 +3,8 @@ const siteMetadata = {
   title: 'Stack Junkie',
   author: 'Christopher Kvamme',
   headerTitle: 'Stack Junkie',
-  description: 'Stack Junkie is a transparent dev blog and project portfolio chronicling real experiments with AI, code, and new technology. Follow ongoing projects, deep-dive articles, and honest lessons learned.',
+  description:
+    'Stack Junkie is a transparent dev blog and project portfolio chronicling real experiments with AI, code, and new technology. Follow ongoing projects, deep-dive articles, and honest lessons learned.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://stack-junkie.com',

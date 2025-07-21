@@ -28,5 +28,5 @@ const projectsData: Project[] = [
     imgSrc: '/static/images/monthly-budget-logo.png', // Add your app's logo/screenshot here
     href: 'https://github.com/stack-junkie/Monthly-Budget',
   },
-];
-export default projectsData;
+]
+export default projectsData
