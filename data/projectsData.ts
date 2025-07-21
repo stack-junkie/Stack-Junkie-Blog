@@ -7,21 +7,26 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'Stack Junkie Website',
+    description: `A transparent development blog built with Next.js and Tailwind CSS, showcasing 
+    real experiments with AI, modern web technologies, and honest documentation of the 
+    development process.`,
+    imgSrc: '/static/images/logo.png',
+    href: 'https://github.com/stack-junkie/Stack-Junkie-Blog.git',
   },
-  {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
-  },
-]
 
-export default projectsData
+  {
+    title: 'ClaudeCraft',
+    description: `ClaudeCraft is a Minecraft server management and AI-powered scripting toolkit using Claude, designed for developers who want to automate and enhance their Minecraft experience with LLMs.`,
+    imgSrc: '/static/images/claudecraft.png', // Place your logo or a screenshot in this path if you have one
+    href: 'https://github.com/stack-junkie/ClaudeCraft',
+  },
+
+  {
+    title: 'Monthly Budget',
+    description: `Monthly Budget is a simple, open-source app for tracking monthly income and expenses. Built for personal finance enthusiasts, it focuses on clarity, privacy, and easy self-hosting.`,
+    imgSrc: '/static/images/monthly-budget-logo.png', // Add your app's logo/screenshot here
+    href: 'https://github.com/stack-junkie/Monthly-Budget',
+  },
+];
+export default projectsData;
