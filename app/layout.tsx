@@ -1,6 +1,9 @@
+// app/layout.tsx
 import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
+
+import Script from 'next/script'
 import { Analytics as VercelAnalytics } from '@vercel/analytics/next'
 import { Space_Grotesk } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
@@ -11,9 +14,8 @@ import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
-import Script from 'next/script'
 
-const space_grotesk = Space_Grotesk({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-space-grotesk',
@@ -59,46 +61,17 @@ export const metadata: Metadata = {
   },
 }
 
-// app/layout.tsx
-import 'css/tailwind.css'
-import 'pliny/search/algolia.css'
-import 'remark-github-blockquote-alert/alert.css'
-
-import Script from 'next/script'
-import { Analytics as VercelAnalytics } from '@vercel/analytics/next'
-import { Space_Grotesk } from 'next/font/google'
-import { Analytics, AnalyticsConfig } from 'pliny/analytics'
-import { SearchProvider, SearchConfig } from 'pliny/search'
-import Header from '@/components/Header'
-import SectionContainer from '@/components/SectionContainer'
-import Footer from '@/components/Footer'
-import siteMetadata from '@/data/siteMetadata'
-import { ThemeProviders } from './theme‑providers'
-import { Metadata } from 'next'
-
-const space_grotesk = Space_Grotesk({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-space-grotesk',
-})
-
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID!
-
-export const metadata: Metadata = {
-  /* …your metadata… */
-}
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const basePath = process.env.BASE_PATH || ''
 
   return (
     <html
       lang={siteMetadata.language}
-      className={`${space_grotesk.variable} scroll-smooth`}
+      className={`${spaceGrotesk.variable} scroll-smooth`}
       suppressHydrationWarning
     >
       <head>
-        {/* Favicons & meta */}
+        {/* Favicons & Meta */}
         <link
           rel="apple-touch-icon"
           sizes="76x76"
@@ -127,27 +100,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
         <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
 
-        {/* 1) Load the GA snippet */}
+        {/* Google tag (gtag.js) */}
         <Script
           strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          src="https://www.googletagmanager.com/gtag/js?id=G-NYHYSF7FVP"
         />
-        {/* 2) Initialize gtag */}
         <Script id="gtag-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${GA_ID}', {
-              page_path: window.location.pathname,
-            });
+
+            gtag('config', 'G-NYHYSF7FVP');
           `}
         </Script>
       </head>
 
       <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
-          {/* Pliny’s analytics, if you still want it */}
+          {/* Pliny Analytics */}
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
 
           <SectionContainer>
@@ -158,7 +129,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
           </SectionContainer>
 
-          {/* Vercel’s Analytics */}
+          {/* Vercel Analytics */}
           <VercelAnalytics />
         </ThemeProviders>
       </body>
