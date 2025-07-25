@@ -1,0 +1,264 @@
+---
+title: 'How to Define Your Software MVP from a PRD: A Step-by-Step Guide'
+date: '2025-07-26'
+tags:
+  - mvp
+  - prd
+  - feature-prioritization
+  - moscow-method
+  - lean-software
+  - ai-development
+draft: false
+summary: 'Learn how to trim a large PRD into a lean MVP with MoSCoW prioritization. Cut scope, keep value, and help AI deliver cleaner results.'
+authors:
+  - default
+---
+
+---
+
+# How to Define an MVP from a PRD
+
+## Quick Summary
+
+Learn how to trim a large PRD into a lean MVP with MoSCoW prioritization. Cut scope, keep value, and help AI deliver cleaner results.
+
+---
+
+## Why Every PRD Still Needs an MVP
+
+If you have ever attempted to tackle a software project utilizing AI tools, you have probably experienced that project go off the rails. You probably attempted to remedy that by creating a plan prior to beginning the project in the form of a Product Requirements Document (PRD). The PRD is a comprehensive document that outlines the requirements for a software project. It is a living document that is updated as the project progresses.
+Click [here](/blog/ai-ready-prd-workflow-template) to learn more about creating a PRD if you haven't.
+
+But here's the uncomfortable truth: **trying to build everything at once is a recipe for failure**, especially when using AI coding tools.
+
+### The AI Context‑Window Problem
+
+This happens because modern AI coding assistants have limitations.
+
+- **Limited context windows** cause the to not understand the full context of a given project.
+- **Complexity compounds** when there are multiple features that interact with each other.
+- **Debugging becomes exponential** because of the above issues.
+
+## How an MVP Solves the AI Context‑Window Problem
+
+Results become better when a project break down the project into smaller, more manageable pieces. The solution? Define a Minimum Viable Product (MVP) that proves your project has legs and is worth pursuing.
+
+### MVP Principles:
+
+1. **Core Value First** — include only features that deliver the main value proposition.
+2. **Complete User Journey** — users must finish one meaningful task end‑to‑end.
+3. **Quality Over Quantity** — five polished features beat fifteen broken ones.
+4. **Feedback Ready** — stable enough for real user feedback.
+
+### The MoSCoW Method: Prioritization Framework
+
+| Category        | Description                                                  | MVP Inclusion |
+| --------------- | ------------------------------------------------------------ | ------------- |
+| **Must Have**   | Core features without which the product does not work        | ✅ Always     |
+| **Should Have** | Important features that significantly improve the experience | ⚠️ Maybe      |
+| **Could Have**  | Nice‑to‑have features that enhance the experience            | ⚠️ Maybe      |
+| **Won’t Have**  | Non‑essential or future‑phase features                       | ❌ Never      |
+
+---
+
+## Real-World Example: Daily Habit Tracker MVP
+
+Let's say you want to build an app that tracks your daily habits. You defined your PRD, and you want to begin work on the project. You're excited because this is the idea that you're going to work through completion. You put in the work, made it comprehensive, planned for over 20 awesome features, all to make it uniquely yours.
+
+The next step will be to define your MVP.
+
+### List All Features
+
+**Daily habit tracking application features:**
+
+1. Habit Creation & Scheduling
+2. Daily Check‑In
+3. Streak & Calendar View
+4. Basic Onboarding Flow
+5. Account Signup (email/password & OAuth)
+6. Habit Limits Enforcement (max 3 free habits)
+7. Push & Email Reminders
+8. Habit Notes (optional daily comments)
+9. Analytics Dashboard (weekly/monthly stats)
+10. Stripe‑Based Pro Subscription
+11. Performance & Security Essentials (300 ms loads, HTTPS, encryption)
+12. Social Sharing (streak screenshots)
+13. CSV Export of history
+14. Custom Reminder Sounds & Themes
+15. Badges & Trophies for milestones
+16. Advanced Charts (line/bar trend views)
+17. Group Challenges / Leaderboards
+18. AI Coaching & Smart Suggestions
+19. Wearables / Health‑API Integrations
+20. Multi‑User / Family Accounts
+21. Complex Task Dependency Logic
+
+### Sort Features Using MoSCoW Method
+
+**Organize the features using the MoSCoW method:**
+
+1. Must have.
+2. Should have.
+3. Could have.
+4. Won't have.
+
+Think about the goal of the MVP. **help a user mark a habit as done each day**. The must have features serve that goal. It helps to map out the minimal workflow for a user to utilize the app.
+
+### Minimal Workflow
+
+1. Open the app.
+2. Tap **Done** for today’s habit.
+3. See progress.
+
+#### Ruthless Prioritization Questions
+
+1. Can the app launch without this feature?
+2. Will the user still complete the minimal workflow?
+3. Does removing it avoid revenue, compliance, or functionality loss?
+4. Is another feature dependent on it?
+
+If any feature doesn't pass any of these questions, it should not be in the MVP.
+
+### Results of the MoSCoW Sort
+
+**Must Have**
+
+- **Habit Creation** — name + daily frequency.
+- **Daily Check‑In Toggle** — one‑tap Done/Not Done.
+- **Progress Feedback** — simple streak counter or list view.
+- **Data Persistence** — save habits and check‑ins locally.
+- **Minimal UI & Onboarding** — create first habit, then main screen.
+
+**Should Have**
+
+- Streak & Calendar View
+- Account Signup (email/password & OAuth)
+- Push & Email Reminders
+- Analytics Dashboard (weekly/monthly stats)
+- Performance & Security Essentials (300 ms loads, HTTPS, encryption)
+
+**Could Have**
+
+- Habit Limits Enforcement (max 3 free habits)
+- Habit Notes (optional daily comments)
+- Stripe‑Based Pro Subscription
+- Social Sharing (streak screenshots)
+- CSV Export of history
+- Custom Reminder Sounds & Themes
+- Badges & Trophies for milestones
+- Advanced Charts (line/bar trend views)
+- Group Challenges / Leaderboards
+- Wearables / Health‑API Integrations
+- Multi‑User / Family Accounts
+
+**Won’t Have**
+
+- AI Coaching & Smart Suggestions
+- Complex Task Dependency Logic
+
+---
+
+## Common MVP Mistakes to Avoid
+
+| Pitfall                                                  | Why it hurts                                        | Simple fix                                                           |
+| -------------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------------- |
+| **Treating an MVP like a full v1.0**                     | Adds weeks of work and blurs the test signal.       | Strip scope until a single use‑case still works.                     |
+| **Writing specs the AI can’t fit in its context window** | Model loses track and writes the wrong code.        | Feed one file or feature at a time; link to the full PRD separately. |
+| **Confusing an MVP with a prototype**                    | Throwaway demo ends up in production.               | Decide upfront: prototype for learning, MVP for shipping.            |
+| **Ignoring non‑functional basics (security, perf)**      | “Lean” release breaks or leaks data.                | Set a baseline checklist for security and performance.               |
+| **Over‑relying on AI without human review**              | Silent errors pile up.                              | Schedule short daily code reviews to catch drift early.              |
+| **Feature creep**                                        | Endless “just one more feature” delays launch.      | Park new ideas in Should/Could lists for later sprints.              |
+| **Perfect design**                                       | Weeks lost polishing pixels before users see value. | Use a UI framework; focus on working functionality.                  |
+| **Skipping user feedback**                               | You build in isolation and miss real needs.         | Ship to 10 beta users within two weeks and iterate fast.             |
+
+## Conclusion & Next Steps
+
+Cut the scope, build the core, ship fast, learn faster.
+That’s the cycle.
+
+**_Next steps_**
+
+1. Try it out. Open your PRD. Mark every feature as Must Have, Should Have, or Could Have.
+2. Keep only the Musts. That’s your MVP.
+3. Build it with strict limits—one file, one task at a time.
+4. Put the result in front of real users.
+5. Watch, measure, and revise. Then start the loop again.
+
+---
+
+## FAQ
+
+**1. How small should my MVP be?**
+If you can’t build and ship it in 2–4 weeks, it’s probably too big.
+
+**2. How do I decide which features make the cut?**
+Run each item through MoSCoW: Must for core value, Should/Could for later, Won’t for now.
+
+**3. Do non‑functional requirements belong in the MVP?**
+Yes—set a bare‑minimum checklist (HTTPS, basic auth, 300 ms loads). A broken or unsafe MVP earns no useful feedback.
+
+**4. How do I use AI tools without blowing the context window?**
+Feed the model one file or feature at a time; link to the full PRD for reference. Review daily.
+
+**5. What if my MVP flops with users?**
+Treat it as data, not failure. Revise your Must list and run the loop again.
+
+---
+
+## Further Resources
+
+- Here is a very useful [AI Product Development Toolkit](https://github.com/TechNomadCode/AI-Product-Development-Toolkit) created by [TechNomadCode](https://github.com/TechNomadCode) that includes templates and scripts that streamline PRD writing and MVP scoping.
+- Check out [Our AI Ready PRD Workflow Template](/blog/ai-ready-prd-workflow-template) article to learn how to create a PRD to begin with.
+- Read more about the [MoSCoW Method](https://www.techtarget.com/searchsoftwarequality/definition/MoSCoW-method).
+- More on [Ruthless Prioritization](https://www.atlassian.com/blog/productivity/simple-prioritization-technique).
+
+<script type="application/ld+json">
+  {`
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How small should my MVP be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you can’t build and ship it in 2–4 weeks, it’s probably too big."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I decide which features make the cut?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Run each item through MoSCoW: Must for core value, Should/Could for later, Won’t for now."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do non‑functional requirements belong in the MVP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes—set a bare‑minimum checklist (HTTPS, basic auth, 300 ms loads). A broken or unsafe MVP earns no useful feedback."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use AI tools without blowing the context window?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Feed the model one file or feature at a time; link to the full PRD for reference. Review daily."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my MVP flops with users?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Treat it as data, not failure. Revise your Must list and run the loop again."
+      }
+    }
+  ]
+}
+`}
+</script>
